@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#wrapper {
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.container {
+    height: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+
+}
+.container h1 {
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 20px 0;
+    margin-bottom: 20px;
+    font-size: 3rem;
+}
+
+.gallary {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.card {
+    position: relative;
+    width: 32%;
+    height: 165px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    filter: grayscale(100%);
+    box-shadow: 0 0 20px #333;
+    object-fit: cover;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    filter: drop-shadow(0 0 10px #333);
+    transition: 0.3s;
+}
+
+.card img:hover {
+    filter: grayscale(0%);
+}
+
+.card figcaption {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    padding: 10px 25px;
+    height: 20%;
+    font-size: 16px;
+    color: white;
+    opacity: 0;
+    font-weight: 500;
+    border-radius: 0 0 10px 10px;
+    transition: 0.3s;
+}
+
+.card:hover figcaption {
+    opacity: 1;
+    transform: scale(1.05);
+}
